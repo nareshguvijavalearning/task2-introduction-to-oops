@@ -1,0 +1,51 @@
+public class Account {
+	
+	private double amount;
+	
+	private int  accono;
+	public double getAmount() {
+		return amount;
+	}
+	
+	public Account() {
+		super();
+	}
+	public Account(double amount, int accono) {
+		super();
+		this.amount = amount;
+		this.accono = accono;
+	}
+	
+public void deposit(double amount) {
+	this.amount +=amount;
+}
+public void withdraw(double amount) {
+	
+	this.amount -=amount;
+	
+}
+}
+
+
+
+
+
+
+Main Class:
+
+
+
+public class Useaccount {
+
+	
+	public static void main(String[] args) {
+		
+		Account n=new Account();
+		n.deposit(1000);
+		n.withdraw(200);
+		System.out.println("balance="+n.getAmount());
+		
+		
+	}
+
+}
