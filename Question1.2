@@ -1,0 +1,91 @@
+package guvipractice;
+
+public class Product {
+	
+	private long pid;
+	private double price;
+	private int quantity;
+	public Product(long pid, double price, int quantity) {
+		super();
+		this.pid = pid;
+		this.price = price;
+		this.quantity = quantity;
+	}
+	public long getPid() {
+		return pid;
+	}
+	public void setPid(long pid) {
+		this.pid = pid;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	
+	@Override
+	public String toString() {
+		return "Product [pid=" + pid + ", price=" + price + ", quantity=" + quantity + "]";
+	}
+
+}
+
+
+
+Main Class:
+
+public class Useproduct {
+	public static void main(String[] args) {
+		
+		
+		Product[] prod = new Product[5];
+		
+		prod[0] =new Product(01247555,120,100);
+		prod[1] =new Product(01244700,220,200);
+		prod[2] =new Product(01247555,320,300);
+		prod[3] =new Product(01247555,820,400);
+		prod[4] =new Product(01247555,1020,600);
+		
+		 double totalamountspent = 0;
+		 double highestprice = 0;
+		 long pidwithhighestprice=0;
+		 //double totalcost=0;
+			
+		for(Product product:prod) {
+			
+			totalamountspent +=product.getPrice()*product.getQuantity();
+			
+		}
+		System.out.println("amountspent="+totalamountspent);
+		
+		for(Product eachproducts:prod) {
+			
+			if(highestprice<eachproducts.getPrice()) {
+				highestprice=eachproducts.getPrice();
+				pidwithhighestprice=eachproducts.getPid();
+				
+			}
+		}
+		System.out.println("pid with highet price="+pidwithhighestprice);
+		System.out.println("highest price="+highestprice);
+		
+		 }
+	}
+
+
+
+
+
+
+
+
+
+
+
