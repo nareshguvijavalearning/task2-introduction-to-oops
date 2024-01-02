@@ -1,0 +1,98 @@
+public class Person {
+
+	private String name;
+	private int age;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public Person(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Person [name=" + name + ", age=" + age + "]";
+	}
+	
+	
+}
+
+Child class:
+public class Employee extends Person {
+
+	
+	  private int empId;
+	  private double salary;
+	  
+	    
+	    
+	public Employee(String name, int age, int empId, double salary) {
+		super(name, age);
+		this.empId = empId;
+		this.salary = salary;
+	}
+
+
+
+	public int getEmpId() {
+		return empId;
+	}
+
+
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+
+
+	public double getSalary() {
+		return salary;
+	}
+
+
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+
+
+	public Employee(String name, int age) {
+		super(name, age);
+		
+	}
+
+}
+
+
+Main class:
+
+
+public class Empperimpl {
+
+	public static void main(String[] args) {
+		
+		 Employee employee = new Employee("nareshkumar", 30, 100, 50000.0);
+
+		 
+		 System.out.println("Employee Name: " + employee.getName());
+	        System.out.println("Employee Age: " + employee.getAge());
+	        
+	        
+	        System.out.println("Employee ID: " + employee.getEmpId());
+	        System.out.println("Employee Salary: $" + employee.getSalary());
+	}
+
+}
+
